@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+         
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://cdn.pixabay.com/photo/2019/08/11/21/50/satellite-dish-4400000_1280.jpg');
+           background-repeat: no-repeat;
+           background-size: cover;
+
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+             background-color: rgba(210, 183, 183, 0.062);/* Adjust alpha for transparency */
+            pointer-events: none; /* Allows clicks to pass through the overlay */
+        }
+        h1 {
+            position: relative;
+            left: 400px;
+        }
+        p {
+            margin-left: 300px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <h1>Prediction Result</h1>
+    <p>The customer left in the last month: {{ prediction }}</p>
+   
+</body>
+</html>

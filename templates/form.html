@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2015/12/12/20/48/antennas-1090084_1280.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            
+        }
+            
+        #opacity {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 150%;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity here (0.5 for 50% opacity) */
+        }
+        form {
+            position: relative;
+            margin: 20px;
+            margin-left: 400px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="opacity"></div>
+    <form method="POST"  action="{{ url_for('func') }}">
+        <fieldset>
+            <h1>Telecom Customer Details</h1>
+            <h3>Enter Customer ID <input type="text" name="id"></h3>
+            <h3>Gender:
+                Male <input type="radio" name="gender" value="Male">
+                Female <input type="radio" name="gender" value="Female">
+            </h3>
+            <h3>Senior Citizen:
+                Yes <input type="radio" name="senior" value="1">
+                No <input type="radio" name="senior" value="0">
+            </h3>
+            <h3>Partner:
+                Yes <input type="radio" name="partner" value="Yes">
+                No <input type="radio" name="partner" value="No">
+            </h3>
+            <h3>Dependents:
+                Yes <input type="radio" name="dependents" value="Yes">
+                No <input type="radio" name="dependents" value="No">
+            </h3>
+            <h3>Tenure: <input type="number" name="tenure"></h3>
+            <h3>Phone Service:
+                Yes <input type="radio" name="phone" value="Yes">
+                No <input type="radio" name="phone" value="No">
+            </h3>
+            <h3>Multiple Lines:
+                Yes <input type="radio" name="multipleLines" value="Yes">
+                No <input type="radio" name="multipleLines" value="No">
+                No Phone Service <input type="radio" name="multipleLines" value="No phone service">
+            </h3>
+            <h3>Internet Service:
+                DSL <input type="radio" name="internet" value="DSL">
+                Fiber Optic <input type="radio" name="internet" value="Fiber optic">
+                No <input type="radio" name="internet" value="No">
+            </h3>
+            <h3>Online Security:
+                Yes <input type="radio" name="onlineSecurity" value="Yes">
+                No <input type="radio" name="onlineSecurity" value="No">
+                No Internet Service <input type="radio" name="onlineSecurity" value="No internet service">
+            </h3>
+            <h3>Online Backup:
+                Yes <input type="radio" name="onlineBackup" value="Yes">
+                No <input type="radio" name="onlineBackup" value="No">
+                No Internet Service <input type="radio" name="onlineBackup" value="No internet service">
+            </h3>
+            <h3>Device Protection:
+                Yes <input type="radio" name="deviceProtection" value="Yes">
+                No <input type="radio" name="deviceProtection" value="No">
+                No Internet Service <input type="radio" name="deviceProtection" value="No internet service">
+            </h3>
+            <h3>Tech Support:
+                Yes <input type="radio" name="techSupport" value="Yes">
+                No <input type="radio" name="techSupport" value="No">
+                No Internet Service <input type="radio" name="techSupport" value="No internet service">
+            </h3>
+            <h3>Streaming TV:
+               Yes <input type="radio" name="streamingTV" value="Yes">
+               No <input type="radio" name="streamingTV" value="No">
+               No Internet Service <input type="radio" name="streamingTV" value="No internet service">
+           </h3>
+
+           <h3>Streaming Movies:
+            Yes <input type="radio" name="streamingMovies" value="Yes">
+            No <input type="radio" name="streamingMovies" value="No">
+            No Internet Service <input type="radio" name="streamingMovies" value="No internet service">
+        </h3>
+
+        <h3>Contract:
+         Month to Month <input type="radio" name="Contract" value="Month-to-month">
+         One Year <input type="radio" name="Contract" value="One year">
+         Two Year <input type="radio" name="Contract" value="Two year">
+     </h3>
+
+     <h3>Paperless Billing:
+      Yes <input type="radio" name="paperlessBilling" value="Yes">
+      No <input type="radio" name="paperlessBilling" value="No">
+  </h3>
+
+  <h3>Payment Method:
+   Electronic check <input type="radio" name="paymentMethod" value="Electronic check">
+   Mailed check <input type="radio" name="paymentMethod" value="Mailed check">
+   Bank transfer (automatic)<input type="radio" name="paymentMethod" value="Bank transfer (automatic)">
+   Credit card (automatic)<input type="radio" name="paymentMethod" value="Credit card (automatic)">
+</h3>
+
+<h3>
+   Monthly Charges: <input type="text" name="monthlycharges">
+</h3>
+<h3>
+   Total Charges: <input type="text" name="totalcharges">
+</h3>
+            <button type="submit">Click Here</button>
+        </fieldset>
+    </form>
+</body>
+</html>
